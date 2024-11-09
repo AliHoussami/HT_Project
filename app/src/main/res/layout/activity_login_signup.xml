@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#808080"
+    android:padding="24dp">
+
+    <!-- Health Fact Text -->
+    <TextView
+        android:id="@+id/healthFactTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Did you know? Regular exercise can improve your mental health."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Signup Button -->
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="SIGNUP"
+        android:textColor="#4CAF50"
+        android:backgroundTint="#FFFFFF"
+        android:padding="12dp" />
+
+
+
+</LinearLayout>

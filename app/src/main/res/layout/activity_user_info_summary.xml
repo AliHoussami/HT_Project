@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#888888">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Health Summary"
+            android:textSize="24sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- BMI Result -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBmiResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your BMI: 22.5 (Normal)"
+            android:textSize="16sp"
+            android:textColor="#DDDDDD"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BMR Result -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMR:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBmrResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your BMR: 1600 kcal/day"
+            android:textSize="16sp"
+            android:textColor="#DDDDDD"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Body Fat Result -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Body Fat Percentage:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBodyFatResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Body Fat: 18%"
+            android:textSize="16sp"
+            android:textColor="#DDDDDD"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Additional Info (if needed) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Based on your age, height, weight, and other inputs, here’s a summary of your health metrics. Keep tracking your progress for better health!"
+            android:textSize="16sp"
+            android:textColor="#CCCCCC"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

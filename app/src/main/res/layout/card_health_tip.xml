@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#888888"
+    android:padding="16dp">
+
+    <!-- Scrollable List of Health Facts -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Health Fact Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did You Know?"
+                android:textSize="20sp"
+                android:textColor="#4CAF50"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Fact Paragraphs -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drinking 8 glasses of water a day can boost your energy and focus."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Staying hydrated supports digestion and regulates body temperature."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water also helps to improve skin health and reduce headaches."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proper hydration can improve physical performance during exercise."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hydration is essential for brain function and mood regulation."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <!-- Additional Facts -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eating fruits and vegetables can reduce the risk of chronic diseases."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular exercise can improve mental health and reduce stress."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A balanced diet helps maintain energy levels throughout the day."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleep is essential for memory, learning, and overall health."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reducing sugar intake can lower the risk of obesity and diabetes."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

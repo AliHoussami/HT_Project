@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#888888"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- App Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HealthTrack"
+            android:textSize="28sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"/>
+
+        <!-- BMI Calculator Card -->
+        <Button
+            android:id="@+id/btnBmiCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI Calculator"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BMR Calculator Card -->
+        <Button
+            android:id="@+id/btnBmrCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMR Calculator"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Body Fat Calculator Card -->
+        <Button
+            android:id="@+id/btnBodyFatCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body Fat Calculator"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Health Summary Card -->
+        <Button
+            android:id="@+id/btnHealthSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Health Summary"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Help/FAQ Card -->
+        <Button
+            android:id="@+id/btnHelpFaq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help and FAQ"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnGoToLoginSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            />
+
+
+    </LinearLayout>
+</ScrollView>
