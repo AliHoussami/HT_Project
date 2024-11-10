@@ -39,18 +39,18 @@ class BodyFatCalculatorActivity : ComponentActivity() {
                     val neck = neckInput.toDouble()
                     val hip = if (selectedGenderId == R.id.radioFemale && hipInput.isNotEmpty()) hipInput.toDouble() else 0.0
 
-                    // Calculate body fat percentage based on gender
+                    // Calculate body fat percentage based on gender in metric units
                     val bodyFat = if (selectedGenderId == R.id.radioMale) {
-                        // For men: Ensure waist > neck to avoid negative values in log10
+                        // Metric formula for men
                         if (waist > neck && height > 0) {
-                            86.010 * log10(waist - neck) - 70.041 * log10(height) + 36.76
+                            495 / (1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height)) - 450
                         } else {
                             Double.NaN
                         }
                     } else {
-                        // For women: Ensure waist + hip > neck
+                        // Metric formula for women
                         if (waist + hip > neck && height > 0) {
-                            163.205 * log10(waist + hip - neck) - 97.684 * log10(height) - 78.387
+                            495 / (1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height)) - 450
                         } else {
                             Double.NaN
                         }
