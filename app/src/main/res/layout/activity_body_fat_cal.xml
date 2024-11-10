@@ -56,6 +56,31 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#AAAAAA"/>
 
+    <EditText
+        android:id="@+id/etNeck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter neck circumference in cm"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"/>
+
+    <!-- Optional: Hip Circumference Input (for Women) -->
+    <EditText
+        android:id="@+id/etHip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter hip circumference in cm (for women)"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"/>
+
     <!-- Waist Circumference Input -->
     <EditText
         android:id="@+id/etWaist"
