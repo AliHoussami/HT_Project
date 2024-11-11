@@ -60,14 +60,31 @@ class BodyFatCalculatorActivity : ComponentActivity() {
                     if (bodyFat.isNaN() || bodyFat < 0) {
                         tvBodyFatResult.text = "Calculation error: Check input values."
                     } else {
-                        // Display the result with a minimum threshold to avoid unrealistic low values
-                        tvBodyFatResult.text = String.format("Your Body Fat: %.2f%%", max(bodyFat, 2.0))
+                        val bodyFatCategory = getBodyFatCategory(bodyFat, selectedGenderId == R.id.radioMale)
+                        tvBodyFatResult.text = String.format("Your Body Fat: %.2f%% (%s)", max(bodyFat, 2.0), bodyFatCategory)
                     }
                 } catch (e: NumberFormatException) {
                     Toast.makeText(this, "Please enter valid numbers.", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 Toast.makeText(this, "Please complete all fields and select a gender.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    private fun getBodyFatCategory(bodyFat: Double, isMale: Boolean): String {
+        return if (isMale) {
+            when {
+                bodyFat < 6 -> "Essential fat"
+                bodyFat <= 24 -> "Normal range"
+                bodyFat <= 31 -> "Overfat"
+                else -> "Obese"
+            }
+        } else {
+            when {
+                bodyFat < 14 -> "Essential fat"
+                bodyFat <= 30 -> "Normal range"
+                bodyFat <= 39 -> "Overfat"
+                else -> "Obese"
             }
         }
     }
