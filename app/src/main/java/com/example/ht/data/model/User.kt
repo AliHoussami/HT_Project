@@ -2,6 +2,10 @@ package com.example.ht.data.model
 import com.google.gson.annotations.SerializedName
 
 data class User(
-    @SerializedName("username") val username: String,
-    @SerializedName("password") val password: String
+    val id: String? = null,
+    val username: String,
+    val password: String,
+    val firstName: String,
+    val lastName: String,
+    val phoneNumber: String
 )

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="goals">
+        <item>Lose Weight</item>
+        <item>Gain Muscle</item>
+        <item>Increase Endurance</item>
+        <item>Stay Fit and Healthy</item>
+        <item>Improve Flexibility</item>
+        <item>Reduce Stress</item>
+        <item>Prepare for a Competition</item>
+        <item>Rehabilitation and Recovery</item>
+    </string-array>
+</resources>
