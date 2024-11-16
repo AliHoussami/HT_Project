@@ -35,5 +35,4 @@
         <activity android:name=".About_Activity"/>
         <activity android:name=".BodyFatCalculatorActivity"/>
     </application>
-
 </manifest>

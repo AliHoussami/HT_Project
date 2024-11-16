@@ -35,7 +35,6 @@ class Originalpagemain : ComponentActivity() {
             startActivity(Intent(this, LoginSignupActivity::class.java))
             finish()
 
-
         }
     }
     private var allowBack = false

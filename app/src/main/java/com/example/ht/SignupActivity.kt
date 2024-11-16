@@ -13,28 +13,20 @@ import kotlinx.coroutines.withContext
 import android.util.Log
 
 class SignupActivity : ComponentActivity() {
-
     private lateinit var binding: ActivitySignUpBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.signupButton.setOnClickListener {
             val username = binding.usernameEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
             registerUser(username, password)
         }
     }
-
     private fun registerUser(username: String, password: String) {
         val user = User(username = username, password = password)
-
         Log.d("SignupActivity", "Username: $username, Password: $password")
-
         GlobalScope.launch(Dispatchers.IO) {
             val response = RetrofitInstance.api.registerUser(user)
             withContext(Dispatchers.Main) {
