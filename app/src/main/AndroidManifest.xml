@@ -34,5 +34,6 @@
         <activity android:name=".Bmr_Calculator_Activity"/>
         <activity android:name=".About_Activity"/>
         <activity android:name=".BodyFatCalculatorActivity"/>
+        <activity android:name=".Info_Activity"/>
     </application>
 </manifest>

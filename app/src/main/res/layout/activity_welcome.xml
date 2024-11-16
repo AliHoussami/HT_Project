@@ -43,6 +43,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="100dp"
         android:text="GET STARTED"
+        android:background="@drawable/rounded_button"
         android:textSize="16sp"
         android:textColor="#FFFFFF"
         android:backgroundTint="#4CAF50"

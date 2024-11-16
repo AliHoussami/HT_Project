@@ -10,11 +10,22 @@
 
     <!-- Health Fact Text -->
     <TextView
+        android:id="@+id/Log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
         android:id="@+id/healthFactTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="He who has health, has hope; and he who has hope, has everything."
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:textSize="16sp"
         android:gravity="center"
         android:layout_marginBottom="24dp" />
@@ -25,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
+        android:background="@drawable/rounded_edit_text"
         android:inputType="text"
         android:padding="16dp"
         android:layout_marginBottom="16dp"
@@ -37,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:background="@drawable/rounded_edit_text"
         android:inputType="textPassword"
         android:padding="16dp"
         android:layout_marginBottom="16dp"
@@ -50,6 +63,7 @@
         android:layout_height="wrap_content"
         android:text="LOGIN"
         android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="#4CAF50"
         android:padding="12dp"
         android:layout_marginBottom="16dp" />
@@ -59,6 +73,7 @@
         android:id="@+id/signupTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Don't have an account? Sign up here."
         android:textColor="#FFFFFF"
         android:textSize="14sp"
