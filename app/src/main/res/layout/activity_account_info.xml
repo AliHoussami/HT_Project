@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#808080"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Personal Info"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/fullNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Age -->
+        <TextView
+            android:id="@+id/ageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Gender -->
+        <TextView
+            android:id="@+id/genderTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Height -->
+        <TextView
+            android:id="@+id/heightTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Height: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Weight -->
+        <TextView
+            android:id="@+id/weightTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Goal -->
+        <TextView
+            android:id="@+id/goalTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Goal: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- BMI -->
+        <TextView
+            android:id="@+id/bmiTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMI: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- BMR -->
+        <TextView
+            android:id="@+id/bmrTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BMR: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Body Fat -->
+        <TextView
+            android:id="@+id/bodyFatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body Fat: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Back to Main Page Button -->
+        <Button
+            android:id="@+id/backToMainButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Back to Main Page"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_button"/>
+    </LinearLayout>
+</ScrollView>

@@ -45,9 +45,14 @@ class Info_Activity : ComponentActivity() {
 
             val selectedGender = findViewById<RadioButton>(selectedGenderId).text.toString()
 
-            // Display the collected data as a Toast (optional)
+            // Optionally display collected data
+            Toast.makeText(
+                this,
+                "Age: $age, Gender: $selectedGender, Goal: $selectedGoal",
+                Toast.LENGTH_SHORT
+            ).show()
 
-            // Navigate to MainActivity after successful submission
+            // Navigate to MainActivity or another screen
             startActivity(Intent(this, Originalpagemain::class.java))
             finish() // Close this activity to prevent going back to it
         }

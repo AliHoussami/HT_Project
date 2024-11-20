@@ -1,37 +1,32 @@
 package com.example.ht
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.*
 import androidx.activity.ComponentActivity
 import kotlin.math.log10
-import kotlin.math.max
 
 class BodyFatCalculatorActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_body_fat_cal)
 
-        // References to UI elements
-        val etAge = findViewById<EditText>(R.id.etAge)
         val etHeight = findViewById<EditText>(R.id.etHeight)
-        val etWeight = findViewById<EditText>(R.id.etWeight)
         val etWaist = findViewById<EditText>(R.id.etWaist)
         val etNeck = findViewById<EditText>(R.id.etNeck)
-        val etHip = findViewById<EditText>(R.id.etHip) // Only for women
+        val etHip = findViewById<EditText>(R.id.etHip) // For women only
         val radioGroupGender = findViewById<RadioGroup>(R.id.radioGroupGender)
         val btnCalculateBodyFat = findViewById<Button>(R.id.btnCalculateBodyFat)
         val tvBodyFatResult = findViewById<TextView>(R.id.tvBodyFatResult)
 
-        // Set up button click listener
         btnCalculateBodyFat.setOnClickListener {
-            // Get input values
             val heightInput = etHeight.text.toString()
             val waistInput = etWaist.text.toString()
             val neckInput = etNeck.text.toString()
-            val hipInput = etHip.text.toString() // Only used for women
+            val hipInput = etHip.text.toString()
             val selectedGenderId = radioGroupGender.checkedRadioButtonId
 
-            // Validate that inputs are filled
             if (heightInput.isNotEmpty() && waistInput.isNotEmpty() && neckInput.isNotEmpty() && selectedGenderId != -1) {
                 try {
                     val height = heightInput.toDouble()
@@ -39,29 +34,19 @@ class BodyFatCalculatorActivity : ComponentActivity() {
                     val neck = neckInput.toDouble()
                     val hip = if (selectedGenderId == R.id.radioFemale && hipInput.isNotEmpty()) hipInput.toDouble() else 0.0
 
-                    // Calculate body fat percentage based on gender in metric units
                     val bodyFat = if (selectedGenderId == R.id.radioMale) {
-                        // Metric formula for men
-                        if (waist > neck && height > 0) {
-                            495 / (1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height)) - 450
-                        } else {
-                            Double.NaN
-                        }
+                        // Formula for men
+                        495 / (1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height)) - 450
                     } else {
-                        // Metric formula for women
-                        if (waist + hip > neck && height > 0) {
-                            495 / (1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height)) - 450
-                        } else {
-                            Double.NaN
-                        }
+                        // Formula for women
+                        495 / (1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height)) - 450
                     }
 
-                    // Check if the result is valid and non-negative
                     if (bodyFat.isNaN() || bodyFat < 0) {
-                        tvBodyFatResult.text = "Calculation error: Check input values."
+                        tvBodyFatResult.text = "Invalid input. Please check values."
                     } else {
-                        val bodyFatCategory = getBodyFatCategory(bodyFat, selectedGenderId == R.id.radioMale)
-                        tvBodyFatResult.text = String.format("Your Body Fat: %.2f%% (%s)", max(bodyFat, 2.0), bodyFatCategory)
+                        tvBodyFatResult.text = String.format("Your Body Fat: %.2f%%", bodyFat)
+                        saveBodyFat(bodyFat)
                     }
                 } catch (e: NumberFormatException) {
                     Toast.makeText(this, "Please enter valid numbers.", Toast.LENGTH_SHORT).show()
@@ -71,21 +56,20 @@ class BodyFatCalculatorActivity : ComponentActivity() {
             }
         }
     }
-    private fun getBodyFatCategory(bodyFat: Double, isMale: Boolean): String {
-        return if (isMale) {
-            when {
-                bodyFat < 6 -> "Essential fat"
-                bodyFat <= 24 -> "Normal range"
-                bodyFat <= 31 -> "Overfat"
-                else -> "Obese"
-            }
+
+    private fun saveBodyFat(bodyFat: Double) {
+        val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        val username = sharedPreferences.getString("LOGGED_IN_USER", null)
+
+        if (username != null) {
+            val userPrefs = getSharedPreferences("HealthMetrics_$username", Context.MODE_PRIVATE)
+            val editor = userPrefs.edit()
+            editor.putString("BODY_FAT_RESULT", String.format("%.2f", bodyFat))
+            editor.apply()
+
+            Toast.makeText(this, "Body Fat saved successfully for $username", Toast.LENGTH_SHORT).show()
         } else {
-            when {
-                bodyFat < 14 -> "Essential fat"
-                bodyFat <= 30 -> "Normal range"
-                bodyFat <= 39 -> "Overfat"
-                else -> "Obese"
-            }
+            Toast.makeText(this, "No user logged in. Please log in first.", Toast.LENGTH_SHORT).show()
         }
     }
 }

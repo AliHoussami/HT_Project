@@ -46,13 +46,17 @@ class LoginActivity : ComponentActivity() {
             val response = RetrofitInstance.api.loginUser(username, password)
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful && response.body()?.isNotEmpty() == true) {
-                    // Login successful
+                    // Save the logged-in username
+                    val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.putString("LOGGED_IN_USER", username)
+                    editor.apply()
+
+                    // Navigate to Main Activity
                     Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_SHORT).show()
-                    // Navigate to OriginalPageMain
                     startActivity(Intent(this@LoginActivity, Originalpagemain::class.java))
-                    finish() // Close LoginActivity
+                    finish()
                 } else {
-                    // Login failed
                     Toast.makeText(this@LoginActivity, "Invalid username or password", Toast.LENGTH_SHORT).show()
                 }
             }
