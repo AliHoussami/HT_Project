@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Body Fat Calculator"
         android:textSize="24sp"
-        android:textColor="#4CAF50"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"/>
 
@@ -26,9 +26,9 @@
         android:inputType="number"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:background="@drawable/rounded_edit_text"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"/>
 
     <!-- Height Input -->
     <EditText
@@ -39,9 +39,9 @@
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:background="@drawable/rounded_edit_text"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"/>
 
     <!-- Weight Input -->
     <EditText
@@ -52,9 +52,9 @@
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:background="@drawable/rounded_edit_text"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"/>
 
     <EditText
         android:id="@+id/etNeck"
@@ -64,9 +64,9 @@
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:background="@drawable/rounded_edit_text"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"/>
 
     <!-- Optional: Hip Circumference Input (for Women) -->
     <EditText
@@ -77,9 +77,9 @@
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:background="@drawable/rounded_edit_text"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"/>
 
     <!-- Waist Circumference Input -->
     <EditText
@@ -90,9 +90,9 @@
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:background="@drawable/rounded_edit_text"
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"/>
 
     <!-- Gender Selection -->
     <RadioGroup
@@ -130,6 +130,7 @@
         android:text="Calculate Body Fat"
         android:textColor="#FFFFFF"
         android:backgroundTint="#4CAF50"
+        android:background="@drawable/rounded_button"
         android:layout_marginBottom="24dp"/>
 
     <!-- Body Fat Result Display -->

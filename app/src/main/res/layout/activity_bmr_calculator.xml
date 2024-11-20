@@ -24,12 +24,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your age"
+        android:background="@drawable/rounded_edit_text"
         android:inputType="number"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"
+        />
 
     <!-- Height Input -->
     <EditText
@@ -37,12 +38,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter height in cm"
+        android:background="@drawable/rounded_edit_text"
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"
+        />
 
     <!-- Weight Input -->
     <EditText
@@ -52,10 +54,11 @@
         android:hint="Enter weight in kg"
         android:inputType="numberDecimal"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_edit_text"
         android:padding="12dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAAAAA"/>
+        android:textColor="#000000"
+        android:textColorHint="#BBBBBB"
+        />
 
     <!-- Gender Selection -->
     <RadioGroup
@@ -63,7 +66,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="24dp"
+        >
 
         <RadioButton
             android:id="@+id/radioMale"
@@ -87,6 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calculate BMR"
+        android:background="@drawable/rounded_button"
         android:textColor="#FFFFFF"
         android:backgroundTint="#4CAF50"
         android:layout_marginBottom="24dp"/>
