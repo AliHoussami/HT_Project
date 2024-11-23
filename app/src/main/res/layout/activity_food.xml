@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1E1E1E"
+    android:gravity="center">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Tracker"
+        android:textSize="28sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Total Calories Display -->
+    <TextView
+        android:id="@+id/text_total_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Calories: 0"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- RecyclerView for displaying food items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_food"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_recyclerview_background"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Reset Calories Button -->
+    <Button
+        android:id="@+id/button_reset_calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET CALORIES"
+        android:textSize="18sp"
+        android:backgroundTint="#FF5722"
+        android:paddingVertical="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="8dp" />
+</LinearLayout>

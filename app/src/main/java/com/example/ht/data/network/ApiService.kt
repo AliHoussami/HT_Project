@@ -17,4 +17,7 @@ interface ApiService {
 
     @POST("users")
     suspend fun registerUser(@Body user: User): Response<User>
+
+    @GET("users")
+    suspend fun getAllUsers(): Response<List<User>>
 }

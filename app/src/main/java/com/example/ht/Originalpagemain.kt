@@ -3,6 +3,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import com.example.ht.databinding.ActivityMainBinding
 import android.content.Intent
+import androidx.compose.foundation.lazy.layout.IntervalList
 
 
 class Originalpagemain : ComponentActivity() {
@@ -34,7 +35,9 @@ class Originalpagemain : ComponentActivity() {
         binding.btnGoToLoginSignup.setOnClickListener {
             startActivity(Intent(this, LoginSignupActivity::class.java))
             finish()
-
+        }
+        binding.buttonOpenFoodActivity.setOnClickListener{
+            startActivity(Intent(this,FoodActivity::class.java))
         }
     }
     private var allowBack = false

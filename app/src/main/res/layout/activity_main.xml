@@ -86,6 +86,14 @@
             android:background="@drawable/rounded_button"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/button_open_food_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calorie Tracker"
+            android:background="@drawable/rounded_button"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/btnGoToLoginSignup"
@@ -98,6 +106,10 @@
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"
             />
+
+
+
+
 
 
     </LinearLayout>
