@@ -1,55 +1,54 @@
 package com.example.ht
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ht.data.model.Food
-import android.widget.CheckBox
+import com.example.ht.databinding.ItemFoodBinding
+
 
 class FoodAdapter(
-    private val selectedFoods: Set<String>, // List of already selected food names
-    private val onItemChecked: (Food, Boolean) -> Unit
+    private val onFoodItemClick: (Food, Boolean) -> Unit
 ) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
-    private val foodList = mutableListOf<Food>()
+    private var originalList = listOf<Food>() // Original list for filtering
+    private var filteredList = listOf<Food>() // Current filtered list
 
-    fun submitList(newList: List<Food>?) {
-        foodList.clear()
-        if (newList != null) {
-            foodList.addAll(newList)
+    inner class FoodViewHolder(private val binding: ItemFoodBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(food: Food) {
+            binding.textViewName.text = food.name
+            binding.textViewCalories.text = "Calories: ${food.calories}"
+
+            binding.buttonAdd.setOnClickListener { onFoodItemClick(food, true) }
+            binding.buttonSubtract.setOnClickListener { onFoodItemClick(food, false) }
         }
-        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_food, parent, false)
-        return FoodViewHolder(view)
+        val binding = ItemFoodBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return FoodViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
-        holder.bind(foodList[position])
+        holder.bind(filteredList[position])
     }
 
-    override fun getItemCount(): Int = foodList.size
+    override fun getItemCount(): Int = filteredList.size
 
-    inner class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val nameTextView: TextView = itemView.findViewById(R.id.text_view_name)
-        private val caloriesTextView: TextView = itemView.findViewById(R.id.text_view_calories)
-        private val checkBox: CheckBox = itemView.findViewById(R.id.checkbox_select_food)
+    fun submitList(foods: List<Food>) {
+        originalList = foods
+        filteredList = foods
+        notifyDataSetChanged()
+    }
 
-        fun bind(food: Food) {
-            nameTextView.text = food.name
-            caloriesTextView.text = "Calories: ${food.calories}"
-
-            // Pre-check based on saved selectedFoods
-            checkBox.setOnCheckedChangeListener(null) // Prevent recycling issues
-            checkBox.isChecked = selectedFoods.contains(food.name)
-
-            checkBox.setOnCheckedChangeListener { _, isChecked ->
-                onItemChecked(food, isChecked)
-            }
+    // Filter function for search bar
+    fun filter(query: String) {
+        filteredList = if (query.isEmpty()) {
+            originalList
+        } else {
+            originalList.filter { it.name.contains(query, ignoreCase = true) }
         }
+        notifyDataSetChanged()
     }
 }

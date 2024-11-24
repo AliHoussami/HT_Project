@@ -2,24 +2,34 @@ package com.example.ht
 
 import android.content.Context
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.example.ht.databinding.ActivityUserInfoSummaryBinding
 
 class Summary_Activity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_info_summary)
+        val binding = ActivityUserInfoSummaryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val tvBmiResult = findViewById<TextView>(R.id.tvBmiResult)
-        val tvBmrResult = findViewById<TextView>(R.id.tvBmrResult)
-        val tvBodyFatResult = findViewById<TextView>(R.id.tvBodyFatResult)
+        val tvBmiResult = binding.tvBmiResult
+        val tvBmrResult = binding.tvBmrResult
+        val tvBodyFatResult = binding.tvBodyFatResult
+        val tvCaloriesToday = binding.tvCaloriesToday // TextView for Calories Today
 
         // Retrieve the logged-in username
         val sharedPreferences = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         val username = sharedPreferences.getString("LOGGED_IN_USER", null)
 
+        // Retrieve total calories from SharedPreferences
+        val foodPrefs = getSharedPreferences("FoodPrefs", Context.MODE_PRIVATE)
+        val totalCaloriesToday = foodPrefs.getInt("totalCalories", 0)
+
+        // Update the Calories Today display
+        tvCaloriesToday.text = "Calories Today: $totalCaloriesToday"
+
+        // If the user is logged in, retrieve their health metrics
         if (username != null) {
             // Access user-specific SharedPreferences
             val userPrefs = getSharedPreferences("HealthMetrics_$username", Context.MODE_PRIVATE)

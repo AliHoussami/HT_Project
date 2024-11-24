@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HT</string>
+    <string name="total_calories">Total Calories: %1$d</string>
 </resources>

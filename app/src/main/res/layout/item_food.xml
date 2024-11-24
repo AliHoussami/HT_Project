@@ -4,36 +4,70 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="12dp"
-    android:background="@drawable/rounded_item_background"
-    android:layout_marginBottom="8dp"
-    android:gravity="center_vertical">
+    android:padding="8dp"
+    android:background="@drawable/rounded_recyclerview_item"
+    android:layout_marginBottom="8dp">
 
-    <!-- Checkbox for Selection -->
+    <!-- Checkbox for selecting food -->
     <CheckBox
         android:id="@+id/checkbox_select_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:padding="4dp" />
 
-    <!-- Food Name -->
-    <TextView
-        android:id="@+id/text_view_name"
+    <!-- Vertical layout for food name, calories, and quantity -->
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Food Name"
-        android:textSize="16sp"
-        android:textColor="#000000"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <!-- Food Name -->
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Name"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Calories -->
+        <TextView
+            android:id="@+id/text_view_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calories: 0"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/text_view_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty: 0"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Decrease Quantity Button -->
+    <Button
+        android:id="@+id/button_subtract"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
-    <!-- Food Calories -->
-    <TextView
-        android:id="@+id/text_view_calories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calories: 0"
-        android:textSize="14sp"
-        android:textColor="#666666" />
+    <!-- Increase Quantity Button -->
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 </LinearLayout>
