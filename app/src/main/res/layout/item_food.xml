@@ -12,9 +12,10 @@
     <CheckBox
         android:id="@+id/checkbox_select_food"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_gravity="center_vertical"
-        android:padding="4dp" />
+        android:padding="8dp"
+        android:gravity="center"/>
 
     <!-- Vertical layout for food name, calories, and quantity -->
     <LinearLayout
@@ -59,6 +60,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="-"
+        android:background="@drawable/button_red"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
@@ -68,6 +70,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:text="+"
+        android:background="@drawable/button_green"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 </LinearLayout>

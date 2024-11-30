@@ -41,9 +41,10 @@ class FoodFragment : Fragment() {
         updateTotalCaloriesDisplay(totalCalories)
 
         setupRecyclerView()
-        setupSearchBar() // Added search bar functionality
+        setupSearchBar()
         fetchFoods()
 
+        // Reset calories button functionality
         binding.buttonResetCalories.setOnClickListener {
             sharedPreferences.edit().putInt("totalCalories", 0).apply()
             updateTotalCaloriesDisplay(0)
@@ -84,7 +85,7 @@ class FoodFragment : Fragment() {
             override fun onResponse(call: Call<List<Food>>, response: Response<List<Food>>) {
                 if (response.isSuccessful) {
                     response.body()?.let { foods ->
-                        adapter.submitList(foods)
+                        adapter.submitList(foods) // Pass the list to the adapter
                     }
                 } else {
                     Toast.makeText(requireContext(), "Failed to fetch foods", Toast.LENGTH_SHORT).show()
@@ -106,5 +107,3 @@ class FoodFragment : Fragment() {
         _binding = null
     }
 }
-
-

@@ -90,6 +90,7 @@
             android:id="@+id/button_open_food_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
             android:text="Calorie Tracker"
             android:background="@drawable/rounded_button"
             android:textColor="#FFFFFF"
@@ -106,11 +107,6 @@
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"
             />
-
-
-
-
-
 
     </LinearLayout>
 </ScrollView>
