@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object FoodsRetrofitInstance {
 
-    private const val BASE_URL = "http://10.0.2.2:3000/" // Replace with your actual server URL
+    private const val BASE_URL = "http://10.0.2.2:3001/" // Replace with your actual server URL
 
     val apiService: FoodApiService by lazy {
         Retrofit.Builder()

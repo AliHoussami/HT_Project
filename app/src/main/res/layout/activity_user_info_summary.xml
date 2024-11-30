@@ -19,7 +19,7 @@
             android:text="Your Health Summary"
             android:textSize="24sp"
             android:textColor="#4CAF50"
-            android:textStyle="bold"
+            android:textStyle="italic"
             android:layout_marginBottom="24dp"/>
 
         <!-- BMI Result -->
@@ -97,6 +97,39 @@
             android:textColor="#DDDDDD"
             android:layout_marginBottom="16dp"
              />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Height = 0"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#DDDDDD"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Your Weight = 0"
+            android:textColor="#DDDDDD"/>
 
         <!-- Additional Info (if needed) -->
         <TextView
@@ -104,12 +137,11 @@
             android:layout_height="wrap_content"
             android:text="Based on your age, height, weight, and other inputs, here’s a summary of your health metrics. Keep tracking your progress for better health!"
             android:textSize="16sp"
-            android:textColor="#CCCCCC"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:layout_marginTop="24dp"
             android:gravity="center"
             android:layout_marginBottom="16dp"/>
-
-
 
     </LinearLayout>
 </ScrollView>
