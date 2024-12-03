@@ -38,7 +38,7 @@
         <activity android:name=".BodyFatCalculatorActivity"/>
         <activity android:name=".Info_Activity"/>
         <activity android:name=".FoodHostActivity"/>
-        <activity android:name=".WaterTrackerActivity"/>
+
 
     </application>
 </manifest>

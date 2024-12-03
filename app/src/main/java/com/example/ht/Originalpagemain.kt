@@ -22,6 +22,9 @@ class Originalpagemain : ComponentActivity() {
         binding.btnBodyFatCalculator.setOnClickListener {
             startActivity(Intent(this,BodyFatCalculatorActivity::class.java))
         }
+        binding.btnInfo.setOnClickListener {
+            startActivity(Intent(this,height_weight::class.java))
+        }
         binding.btnHealthSummary.setOnClickListener {
             startActivity(Intent(this,Summary_Activity::class.java))
         }
