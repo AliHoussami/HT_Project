@@ -38,6 +38,9 @@ class Originalpagemain : ComponentActivity() {
         binding.buttonOpenFoodActivity.setOnClickListener {
             startActivity(Intent(this, FoodHostActivity::class.java))
         }
+        binding.buttonOpenWaterTracker.setOnClickListener {
+            startActivity(Intent(this, WaterTrackerActivity::class.java))
+        }
     }
     private var allowBack = false
     override fun onBackPressed() {

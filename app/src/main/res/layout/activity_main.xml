@@ -97,6 +97,17 @@
             android:layout_gravity="center" />
 
         <Button
+            android:id="@+id/buttonOpenWaterTracker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Water Tracker"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"/>
+
+        <Button
             android:id="@+id/btnGoToLoginSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,6 +118,8 @@
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"
             />
+
+
 
     </LinearLayout>
 </ScrollView>
